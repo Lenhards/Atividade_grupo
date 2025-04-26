@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste</title>
+<head> 
+  <meta charset="UTF-8">
+  <title>Página com fundo e conteúdo</title>
+  <style>
+    /*Isto é um comentario em Css não vai aparecer no codigo vai apenas avisar sobre coisas que coloquei no codigo */
+    header {
+      /*margin top,bottom,left e right servem para mover objetos para os os lados apenas funciona em paginas dedicadas ao css ou que onde estiver dentro da tag <style> */
+      margin-top: 100px; 
+      width: 1000px;
+      height: 50px;
+      text-align: center; /*para quem não sabe ingles isso alinha o texto, pode ser no centro, direita, esquerda etc.  */
+      background-color: rgba(139, 0, 4, 0.9); /*use apenas cores rgba se quiser fazer o efeito de transparencia se não quiser apenas faça com hex mesmo */
+      box-shadow: 0 0 100px rgba(68, 0, 0, 0.5);
+      color: white;
+      padding: 10px 0;
+
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFppg5Wrco7O7ouuJ7mf1lWcat7QkSoYXu8A&s'); /* substituir por uma imagem propria */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column; /* Empilha os elementos verticalmente */
+      justify-content: flex-start;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .conteudo { /* Aqui é o id do conteudo ele vai criar a barra de conteudos onde vai ficar os seus texto e imagens se for usado com div da para fazer um efeito de paginas que nem no word se usar corretamente o margin*/
+      width: 1000px;
+      min-height: 200px;
+      background-color: rgba(255, 255, 255, 0.9); /* branco com um pouco de transparência */
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(241, 241, 241, 0.3);
+    }
+    
+  </style>
 </head>
 <body>
-    <h1>Alteraçao</h1>
+  <header>
+    <h1 style="text-align:left; margin-left: 30px">logo</h1>
+  </header>
+  <div class="conteudo"> <!--Div cria uma DIVISÃO para o conteudo a pagina é infinita pode colocar o que quiser o quanto quiser desde que não fique feio -->
+    <h1>Bem-vindo</h1>
+    <p></p>
+  </div>
+
+
 </body>
 </html>
