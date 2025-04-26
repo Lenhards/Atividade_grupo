@@ -17,18 +17,23 @@
       padding: 10px 0;
 
     }
+    img {
+      margin: 0;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(241, 241, 241, 0.3);
+    }
     body {
       margin: 0;
       padding: 0;
       height: 100vh;
-      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFppg5Wrco7O7ouuJ7mf1lWcat7QkSoYXu8A&s'); /* substituir por uma imagem propria */
+      background-image: url('https://pbs.twimg.com/media/GpfxSvaWUAAIrBm?format=jpg&name=4096x4096'); /*imagem de fundo substituir por uma imagem propria */
       background-size: cover;
       background-position: center;
       display: flex;
       flex-direction: column; /* Empilha os elementos verticalmente */
       justify-content: flex-start;
       align-items: center;
-      font-family: Arial, sans-serif;
+      font-family: Arial, sans-serif; /*alterar aparencia de texto, se quiser pode modificar*/
     }
 
     .conteudo { /* Aqui é o id do conteudo ele vai criar a barra de conteudos onde vai ficar os seus texto e imagens se for usado com div da para fazer um efeito de paginas que nem no word se usar corretamente o margin*/
@@ -46,10 +51,12 @@
     <h1 style="text-align:left; margin-left: 30px">logo</h1>
   </header>
   <div class="conteudo"> <!--Div cria uma DIVISÃO para o conteudo a pagina é infinita pode colocar o que quiser o quanto quiser desde que não fique feio -->
-    <h1>Bem-vindo</h1>
+    <br>
+    <h1>Titulo</h1>
     <p></p>
+    <img src="" alt="" height="100px"> <!--para alterar o local da imagem da para usar o margin localmente ou em style se preferir que todas as imagens estejam na mesma posição-->
   </div>
-
+<!--o logo sera alterado depois e mais botoes serão adicionados-->
 
 </body>
 </html>
