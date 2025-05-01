@@ -1,4 +1,10 @@
-/*Isto é um comentario em Css não vai aparecer no codigo vai apenas avisar sobre coisas que coloquei no codigo */
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head> 
+  <meta charset="UTF-8">
+  <title>Página com fundo e conteúdo</title>
+  <style>
+    /*Isto é um comentario em Css não vai aparecer no codigo vai apenas avisar sobre coisas que coloquei no codigo */
     header {
       /*margin top,bottom,left e right servem para mover objetos para os os lados apenas funciona em paginas dedicadas ao css ou que onde estiver dentro da tag <style> */
       margin-top: 100px; 
@@ -14,8 +20,7 @@
     img {
       margin: 0;
       padding: 20px;
-      border: 5px;
-      box-shadow: inset 0 0 20px rgba(241, 241, 241, 0.3);
+      box-shadow: 0 0 20px rgba(241, 241, 241, 0.3);
     }
     body {
       margin: 0;
@@ -23,8 +28,6 @@
       height: 100vh;
       background-image: url('https://pbs.twimg.com/media/GpfxSvaWUAAIrBm?format=jpg&name=4096x4096'); /*imagem de fundo substituir por uma imagem propria */
       background-size: cover;
-      background-repeat: no-repeat; /*não repetir a imagem de fundo */
-      background-attachment: fixed; /*imagem de fundo fixa */
       background-position: center;
       display: flex;
       flex-direction: column; /* Empilha os elementos verticalmente */
@@ -32,22 +35,28 @@
       align-items: center;
       font-family: Arial, sans-serif; /*alterar aparencia de texto, se quiser pode modificar*/
     }
-    .recomendados{
-      margin-right: 100px;
-      width: 800px;
-      height: 50px;
-      background-color: rgba(0, 0, 255, 1000);
-      padding: 20px;
-      box-shadow: 0 0 20px rgba(241, 241, 241, 0.3);
-    }
 
-    .conteudo {
+    .conteudo { /* Aqui é o id do conteudo ele vai criar a barra de conteudos onde vai ficar os seus texto e imagens se for usado com div da para fazer um efeito de paginas que nem no word se usar corretamente o margin*/
       width: 1000px;
+      min-height: 200px;
       background-color: rgba(255, 255, 255, 0.9); /* branco com um pouco de transparência */
       padding: 20px;
       box-shadow: 0 0 20px rgba(241, 241, 241, 0.3);
-      display: flex;
-      flex-direction: column; /* Mantém os elementos empilhados verticalmente */
-      align-items: center; /* Centraliza os elementos horizontalmente */
-      gap: 20px; /* Adiciona espaçamento entre os elementos */
     }
+    
+  </style>
+</head>
+<body>
+  <header>
+    <h1 style="text-align:left; margin-left: 30px">logo</h1>
+  </header>
+  <div class="conteudo"> <!--Div cria uma DIVISÃO para o conteudo a pagina é infinita pode colocar o que quiser o quanto quiser desde que não fique feio -->
+    <br>
+    <h1>Titulo</h1>
+    <p></p>
+    <img src="" alt="" height="100px"> <!--para alterar o local da imagem da para usar o margin localmente ou em style se preferir que todas as imagens estejam na mesma posição-->
+  </div>
+<!--o logo sera alterado depois e mais botoes serão adicionados-->
+
+</body>
+</html>
