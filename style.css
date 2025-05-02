@@ -1,28 +1,28 @@
 /*Isto é um comentario em Css não vai aparecer no codigo vai apenas avisar sobre coisas que coloquei no codigo */
     header {
       /*margin top,bottom,left e right servem para mover objetos para os os lados apenas funciona em paginas dedicadas ao css ou que onde estiver dentro da tag <style> */
-      margin-top: 100px; 
+      margin-top: 50px; 
       width: 1000px;
       height: 50px;
-      text-align: left; /*para quem não sabe ingles isso alinha o texto, pode ser no centro, direita, esquerda etc. so que isso daqui é um menu se possivel não mecha  */
-      background-color: rgba(139, 0, 4, 0.9); /*use apenas cores rgba se quiser fazer o efeito de transparencia se não quiser apenas faça com hex mesmo */
+      text-align: left; /* Alinha o texto à esquerda, pode ser ajustado para centro ou direita */
+      background-color: rgba(139, 0, 4, 1); /*use apenas cores rgba se quiser fazer o efeito de transparencia se não quiser apenas faça com hex mesmo */
       box-shadow: 0 0 100px rgba(68, 0, 0, 0.5);
       color: white;
       padding: 10px 0; /*padding serve para dar um espaçamento entre o texto e a borda do menu */
       flex-direction: row; /* Alinha os itens do menu em linha */
       display: flex; /* Para usar flexbox, que é uma maneira de alinhar os itens de forma responsiva */
-      font-family: fantasy;
+      font-family: Arial, sans-serif;
 
     }
     img {
       margin: 0;
-      border: 5px;
+      border: 5px solid black;
     }
     body {
       margin: 0;
       padding: 0;
       height: 100vh;
-      background-image: url('https://pbs.twimg.com/media/GpfxSvaWUAAIrBm?format=jpg&name=4096x4096'); /*imagem de fundo substituir por uma imagem propria */
+      background-image: url('https://pbs.twimg.com/media/GpfxSvaWUAAIrBm?format=jpg&name=4096x4096'); /* Substitua por uma imagem própria (recomendado: formato JPG ou PNG, dimensões mínimas de 1920x1080 para melhor qualidade) */
       background-size: cover;
       background-repeat: no-repeat; /*não repetir a imagem de fundo */
       background-attachment: fixed; /*imagem de fundo fixa */
@@ -55,14 +55,18 @@
 
     .conteudo {
       width: 1000px;
-      height: 500px;
+      min-height: 500px;
       background-color: rgba(255, 255, 255, 0.9); /* branco com um pouco de transparência */
       padding: 20px;
       display: flex;
       flex-direction: column; /* Mantém os elementos empilhados verticalmente */
       align-items: center; /* Centraliza os elementos horizontalmente */
       gap: 20px; /* Adiciona espaçamento entre os elementos */
-    /*Slider inicioI*/
+      overflow: auto;
+    }
+    .conteudo img {
+      max-width: 100%;
+      height: auto;
     }
     .slider {
       display: block;
@@ -120,6 +124,12 @@
     left: 100px;
   }
   .slider img {
+    display: none; /* Fallback for browsers that do not support opacity and visibility */
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .slider img[aria-hidden="true"] {
     opacity: 0;
     visibility: hidden;
   }
