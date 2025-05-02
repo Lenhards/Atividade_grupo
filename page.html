@@ -3,48 +3,6 @@
 <head> 
   <meta charset="UTF-8">
   <title>Página com fundo e conteúdo</title>
-  <style>
-    /*Isto é um comentario em Css não vai aparecer no codigo vai apenas avisar sobre coisas que coloquei no codigo */
-    header {
-      /*margin top,bottom,left e right servem para mover objetos para os os lados apenas funciona em paginas dedicadas ao css ou que onde estiver dentro da tag <style> */
-      margin-top: 100px; 
-      width: 1000px;
-      height: 50px;
-      text-align: center; /*para quem não sabe ingles isso alinha o texto, pode ser no centro, direita, esquerda etc. so que isso daqui é um menu se possivel não mecha  */
-      background-color: rgba(139, 0, 4, 0.9); /*use apenas cores rgba se quiser fazer o efeito de transparencia se não quiser apenas faça com hex mesmo */
-      box-shadow: 0 0 100px rgba(68, 0, 0, 0.5);
-      color: white;
-      padding: 10px 0;
-
-    }
-    img {
-      margin: 0;
-      padding: 20px;
-      box-shadow: 0 0 20px rgba(241, 241, 241, 0.3);
-    }
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      background-image: url('https://pbs.twimg.com/media/GpfxSvaWUAAIrBm?format=jpg&name=4096x4096'); /*imagem de fundo substituir por uma imagem propria */
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      flex-direction: column; /* Empilha os elementos verticalmente */
-      justify-content: flex-start;
-      align-items: center;
-      font-family: Arial, sans-serif; /*alterar aparencia de texto, se quiser pode modificar*/
-    }
-
-    .conteudo { /* Aqui é o id do conteudo ele vai criar a barra de conteudos onde vai ficar os seus texto e imagens se for usado com div da para fazer um efeito de paginas que nem no word se usar corretamente o margin*/
-      width: 1000px;
-      min-height: 200px;
-      background-color: rgba(255, 255, 255, 0.9); /* branco com um pouco de transparência */
-      padding: 20px;
-      box-shadow: 0 0 20px rgba(241, 241, 241, 0.3);
-    }
-    
-  </style>
 </head>
 <body>
   <header>

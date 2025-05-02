@@ -4,18 +4,19 @@
       margin-top: 100px; 
       width: 1000px;
       height: 50px;
-      text-align: center; /*para quem não sabe ingles isso alinha o texto, pode ser no centro, direita, esquerda etc. so que isso daqui é um menu se possivel não mecha  */
+      text-align: left; /*para quem não sabe ingles isso alinha o texto, pode ser no centro, direita, esquerda etc. so que isso daqui é um menu se possivel não mecha  */
       background-color: rgba(139, 0, 4, 0.9); /*use apenas cores rgba se quiser fazer o efeito de transparencia se não quiser apenas faça com hex mesmo */
       box-shadow: 0 0 100px rgba(68, 0, 0, 0.5);
       color: white;
-      padding: 10px 0;
+      padding: 10px 0; /*padding serve para dar um espaçamento entre o texto e a borda do menu */
+      flex-direction: row; /* Alinha os itens do menu em linha */
+      display: flex; /* Para usar flexbox, que é uma maneira de alinhar os itens de forma responsiva */
+      font-family: fantasy;
 
     }
     img {
       margin: 0;
-      padding: 20px;
       border: 5px;
-      box-shadow: inset 0 0 20px rgba(241, 241, 241, 0.3);
     }
     body {
       margin: 0;
@@ -32,22 +33,100 @@
       align-items: center;
       font-family: Arial, sans-serif; /*alterar aparencia de texto, se quiser pode modificar*/
     }
-    .recomendados{
-      margin-right: 100px;
-      width: 800px;
-      height: 50px;
-      background-color: rgba(0, 0, 255, 1000);
-      padding: 20px;
-      box-shadow: 0 0 20px rgba(241, 241, 241, 0.3);
+    .Menu {
+      margin: 0 auto; /* Centraliza horizontalmente */
+      width: 300px; /* Ajuste conforme necessário */
+      height: 250px; /* Ajuste conforme necessário */
+      background-color: rgba(0, 0, 255, 0.8); /* Ajustei a opacidade para combinar melhor */
+      padding: 0;
+      display: flex;
+      flex-direction: column; /* Empilha os itens do menu verticalmente */
+      align-items: center; /* Centraliza os itens horizontalmente */
+      justify-content: center; /* Centraliza os itens verticalmente */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adicionei uma sombra para destacar */
+    }
+   /*controle de tamanho de slider*/
+    .Menu .slider {
+      margin-right: 95px;
+      gap: -30px;
+      width: 150px;
+      height: 1400px;
     }
 
     .conteudo {
       width: 1000px;
+      height: 500px;
       background-color: rgba(255, 255, 255, 0.9); /* branco com um pouco de transparência */
       padding: 20px;
-      box-shadow: 0 0 20px rgba(241, 241, 241, 0.3);
       display: flex;
       flex-direction: column; /* Mantém os elementos empilhados verticalmente */
       align-items: center; /* Centraliza os elementos horizontalmente */
       gap: 20px; /* Adiciona espaçamento entre os elementos */
+    /*Slider inicioI*/
     }
+    .slider {
+      display: block;
+      width: 250px; /* Ajuste conforme necessário */
+      height: 200px; /* Ajuste conforme necessário */
+      position: relative;
+      overflow: hidden; /* Garante que nada ultrapasse os limites */
+      box-sizing: border-box;
+      margin: 0 auto; /* Centraliza o slider horizontalmente */
+    }
+    
+    .slider li {
+      list-style: none;
+      position: absolute;
+    }
+    
+    .slider img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ajusta a imagem ao contêiner sem distorcer */
+      vertical-align: top;
+      box-sizing: border-box;
+    }
+    
+    .slider input {
+    display: none;
+  }
+  .slider label {
+    background-color: #000;
+    bottom: 10px;
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+    z-index: 10;
+  }
+
+  .slider li:nth-child(1) label {
+    bottom: -16px;
+    left: 10px;
+  }
+
+  .slider li:nth-child(2) label {
+    bottom: -20px;
+    left: 40px;
+  }
+
+  .slider li:nth-child(3) label {
+    bottom: -20px;
+    left: 70px;
+  }
+  .slider li:nth-child(4) label {
+    bottom: -20px;
+    left: 100px;
+  }
+  .slider img {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .slider li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+  }
+
