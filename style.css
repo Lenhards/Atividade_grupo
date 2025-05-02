@@ -18,21 +18,7 @@
       margin: 0;
       border: 5px;
     }
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      background-image: url('https://pbs.twimg.com/media/GpfxSvaWUAAIrBm?format=jpg&name=4096x4096'); /*imagem de fundo substituir por uma imagem propria */
-      background-size: cover;
-      background-repeat: no-repeat; /*não repetir a imagem de fundo */
-      background-attachment: fixed; /*imagem de fundo fixa */
-      background-position: center;
-      display: flex;
-      flex-direction: column; /* Empilha os elementos verticalmente */
-      justify-content: flex-start;
-      align-items: center;
-      font-family: Arial, sans-serif; /*alterar aparencia de texto, se quiser pode modificar*/
-    }
+    
     .Menu {
       margin: 0 auto; /* Centraliza horizontalmente */
       width: 300px; /* Ajuste conforme necessário */
