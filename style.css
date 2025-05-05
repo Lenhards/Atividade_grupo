@@ -1,7 +1,7 @@
 /*Isto é um comentario em Css não vai aparecer no codigo vai apenas avisar sobre coisas que coloquei no codigo */
     header {
       /*margin top,bottom,left e right servem para mover objetos para os os lados apenas funciona em paginas dedicadas ao css ou que onde estiver dentro da tag <style> */
-      margin-top: 100px; 
+      margin-top: 50px; 
       width: 1000px;
       height: 50px;
       text-align: left; /*para quem não sabe ingles isso alinha o texto, pode ser no centro, direita, esquerda etc. so que isso daqui é um menu se possivel não mecha  */
@@ -11,7 +11,19 @@
       padding: 10px 0; /*padding serve para dar um espaçamento entre o texto e a borda do menu */
       flex-direction: row; /* Alinha os itens do menu em linha */
       display: flex; /* Para usar flexbox, que é uma maneira de alinhar os itens de forma responsiva */
-      font-family: fantasy;
+      font-family: Cascadia Code;
+
+
+    }
+    footer {
+      margin-top: 100px; /* Espaçamento superior para o rodapé */
+      width: 1000px; /* Largura do rodapé */
+      height: 50px; /* Altura do rodapé */
+      text-align: center; /* Centraliza o texto no rodapé */
+      background-color: rgba(139, 0, 4, 0.9); /* Cor de fundo do rodapé com transparência */
+      box-shadow: 0 0 100px rgba(68, 0, 0, 0.5); /* Sombra do rodapé */
+      color: white; /* Cor do texto no rodapé */
+      padding: 10px 0; /* Espaçamento interno do rodapé */
 
     }
     img {
@@ -31,6 +43,46 @@
       justify-content: center; /* Centraliza os itens verticalmente */
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adicionei uma sombra para destacar */
     }
+    .card-container {
+      display: flex;        /* Ativa o modo Flexbox */
+      flex-wrap: wrap;      /* Permite que os cards "quebrem" para a linha de baixo */
+      gap: 16px;            /* Espaço entre os cards (horizontal e vertical) */
+      padding: 20px;        /* Espaçamento interno (espaço entre os cards e a borda do container) */
+      justify-content: flex-start;  /* Alinha os cards à esquerda */
+    }
+    .card {
+      display: block;
+      width: 200px;
+      height: 250px;
+      text-decoration: none;
+      color: #000;
+      font-family: Arial, sans-serif;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+      background-color: #fff;
+    }
+    
+    .card:hover {
+      transform: scale(1.02);
+    }
+    /* Área azul que simula uma imagem */
+    .thumbnail-placeholder {
+      width: 100%;              /* Ocupa toda a largura do card */
+      height: 180px;            /* Altura fixa */
+    }
+    
+    .card img {
+      width: 100%;
+      display: block;
+    }
+    
+    .card h3 {
+      margin-top: auto;
+      padding: 12px;
+      font-size: 16px;
+    }
    /*controle de tamanho de slider*/
     .Menu .slider {
       margin-right: 95px;
@@ -40,17 +92,21 @@
     }
 
     .conteudo {
-      width: 1000px;
-      height: 500px;
+      width: 1100px;
+      min-height: auto; /* Permite que o conteúdo cresça conforme necessário */
       background-color: rgba(255, 255, 255, 0.9); /* branco com um pouco de transparência */
       padding: 20px;
       display: flex;
       flex-direction: column; /* Mantém os elementos empilhados verticalmente */
       align-items: center; /* Centraliza os elementos horizontalmente */
       gap: 20px; /* Adiciona espaçamento entre os elementos */
-    /*Slider inicioI*/
+      border: 2px dashed red;
+      
     }
+
+    /*Slider inicioI*/
     .slider {
+
       display: block;
       width: 250px; /* Ajuste conforme necessário */
       height: 200px; /* Ajuste conforme necessário */
