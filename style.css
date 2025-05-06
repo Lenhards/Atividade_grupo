@@ -1,20 +1,43 @@
 /*Isto é um comentario em Css não vai aparecer no codigo vai apenas avisar sobre coisas que coloquei no codigo */
-    header {
+    
+header {
       /*margin top,bottom,left e right servem para mover objetos para os os lados apenas funciona em paginas dedicadas ao css ou que onde estiver dentro da tag <style> */
       margin-top: 50px; 
-      margin-top: 50px; 
-      width: 1000px;
-      height: 50px;
-      text-align: left; /* Alinha o texto à esquerda, pode ser ajustado para centro ou direita */
+      width: 100%;
+      justify-content: center;
+      height: 100px; /* Altura do cabeçalho */
+      display: flex; /* Para usar flexbox, que é uma maneira de alinhar os itens de forma responsiva */
+      align-items: center;
+      text-align: center; /* Alinha o texto à esquerda, pode ser ajustado para centro ou direita */
       background-color: rgba(139, 0, 4, 1); /*use apenas cores rgba se quiser fazer o efeito de transparencia se não quiser apenas faça com hex mesmo */
       box-shadow: 0 0 100px rgba(68, 0, 0, 0.5);
       color: white;
-      padding: 10px 0; /*padding serve para dar um espaçamento entre o texto e a borda do menu */
+      padding: 20px 0; /*padding serve para dar um espaçamento entre o texto e a borda do menu */
       flex-direction: row; /* Alinha os itens do menu em linha */
       display: flex; /* Para usar flexbox, que é uma maneira de alinhar os itens de forma responsiva */
-      font-family: Cascadia Code;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      border-radius: 10px;
+      box-shadow: 0px 0px 15px rgb(255, 0, 0);
+      
 
 
+    }
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      padding: 20px 0;
+    }
+    a {
+      text-decoration: none; /* Remove o sublinhado dos links */
+      color: white; /* Cor do texto dos links */
+      font-size: 20px; /* Tamanho da fonte dos links */
+      margin-right: 20px; /* Espaçamento entre os links */
+    }
+    a:hover {
+      color: rgba(255, 255, 255, 0.8); /* Cor do texto ao passar o mouse */
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Sombra do texto ao passar o mouse */
     }
     footer {
       margin-top: 100px; /* Espaçamento superior para o rodapé */
@@ -29,20 +52,28 @@
     }
     img {
       margin: 0;
-      border: 5px solid black;
+
+    }
+
+    p {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 16px;
+      line-height: 1.6; /* Espaçamento entre linhas */
+      color: #333;       /* Cor do texto */
+      margin-bottom: 16px; /* Espaço entre parágrafos */
+      text-align: justify; /* Justifica o texto */
+      padding: 8px 12px;   /* Espaçamento interno */
+      background-color: #f9f9f9; /* Fundo suave */
+      border-radius: 6px;
     }
     
+    
     .Menu {
-      margin: 0 auto; /* Centraliza horizontalmente */
-      width: 300px; /* Ajuste conforme necessário */
-      height: 250px; /* Ajuste conforme necessário */
-      background-color: rgba(0, 0, 255, 0.8); /* Ajustei a opacidade para combinar melhor */
-      padding: 0;
       display: flex;
-      flex-direction: column; /* Empilha os itens do menu verticalmente */
-      align-items: center; /* Centraliza os itens horizontalmente */
-      justify-content: center; /* Centraliza os itens verticalmente */
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adicionei uma sombra para destacar */
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+      background-color: blue;
     }
     .card-container {
       display: flex;        /* Ativa o modo Flexbox */
@@ -60,13 +91,13 @@
       font-family: Arial, sans-serif;
       border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       transition: transform 0.2s ease;
       background-color: #fff;
     }
     
     .card:hover {
       transform: scale(1.02);
+      color: red;
     }
     /* Área azul que simula uma imagem */
     .thumbnail-placeholder {
@@ -75,6 +106,7 @@
     }
     
     .card img {
+      height: 100%;          /* Faz a imagem ocupar toda a altura do card */
       width: 100%;
       display: block;
     }
@@ -84,15 +116,10 @@
       padding: 12px;
       font-size: 16px;
     }
-   /*controle de tamanho de slider*/
-    .Menu .slider {
-      margin-right: 95px;
-      gap: -30px;
-      width: 150px;
-      height: 1400px;
-    }
+ 
 
     .conteudo {
+      margin-top: 10px;
       width: 1100px;
       min-height: auto; /* Permite que o conteúdo cresça conforme necessário */
       background-color: rgba(255, 255, 255, 0.9); /* branco com um pouco de transparência */
@@ -101,81 +128,78 @@
       flex-direction: column; /* Mantém os elementos empilhados verticalmente */
       align-items: center; /* Centraliza os elementos horizontalmente */
       gap: 20px; /* Adiciona espaçamento entre os elementos */
-      border: 2px dashed red;
       
     }
 
     /*Slider inicioI*/
     .slider {
-
-      display: block;
-      width: 250px; /* Ajuste conforme necessário */
-      height: 200px; /* Ajuste conforme necessário */
+      width: auto;
+      min-width: 300px;
+      max-width: 100%;
+      height: 300px;
       position: relative;
-      overflow: hidden; /* Garante que nada ultrapasse os limites */
-      box-sizing: border-box;
-      margin: 0 auto; /* Centraliza o slider horizontalmente */
+      overflow: hidden;
     }
     
     .slider li {
       list-style: none;
       position: absolute;
+      width: 100%;
+      height: 100%;
     }
     
     .slider img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* Ajusta a imagem ao contêiner sem distorcer */
-      vertical-align: top;
-      box-sizing: border-box;
+  position: absolute;
+  /* Centraliza a imagem no meio do contêiner */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Faz a imagem caber no slider sem distorcer */
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: 50% 50%;
+}
+    
+    .slider li input:checked ~ img {
+      opacity: 1;
+      visibility: visible;
+      z-index: 1;
     }
     
-    .slider input {
-    display: none;
-  }
-  .slider label {
-    background-color: #000;
-    bottom: 10px;
-    cursor: pointer;
-    display: block;
-    height: 10px;
-    position: absolute;
-    width: 10px;
-    z-index: 10;
-  }
-
-  .slider li:nth-child(1) label {
-    bottom: -16px;
-    left: 10px;
-  }
-
-  .slider li:nth-child(2) label {
-    bottom: -20px;
-    left: 40px;
-  }
-
-  .slider li:nth-child(3) label {
-    bottom: -20px;
-    left: 70px;
-  }
-  .slider li:nth-child(4) label {
-    bottom: -20px;
-    left: 100px;
-  }
-  .slider img {
-    display: none; /* Fallback for browsers that do not support opacity and visibility */
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  .slider img[aria-hidden="true"] {
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  .slider li input:checked ~ img {
-    opacity: 1;
-    visibility: visible;
-    z-index: 10;
-  }
+      .slider label {
+        position: absolute;
+        bottom: 10px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: red;
+        border: 2px solid black;
+        cursor: pointer;
+        z-index: 2;
+      }
+      
+      .slider li:nth-child(1) label { left: 10px; }
+      .slider li:nth-child(2) label { left: 30px; }
+      .slider li:nth-child(3) label { left: 50px; }
+      .slider li:nth-child(4) label { left: 70px; }
+      /*itens dos lados*/
+      .container-flex {
+        display: flex;
+        align-items: center; /* Alinha verticalmente ao centro */
+        justify-content: space-between; /* Coloca as imagens nos cantos */
+        width: 100%; /* Faz o container ocupar toda a largura da tela */
+        padding: 20px;
+        position: fixed; /* Fixa as imagens na parte inferior */
+        bottom: 0;
+        z-index: -1; /* Garante que as imagens fiquem abaixo da caixa de conteúdo */
+    }
+    
+    /* Estilos para as imagens */
+    .imagem-flex {
+        max-width: 30%; /* Define a largura máxima para cada imagem */
+        height: auto; /* Mantém a proporção original da imagem */
+    }
 
