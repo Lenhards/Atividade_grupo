@@ -183,24 +183,24 @@ header {
       height: 100%;
     }
     
-    .slider img {
-  position: absolute;
-  /* Centraliza a imagem no meio do contêiner */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* Faz a imagem caber no slider sem distorcer */
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  object-position: 50% 50%;
-  display: flex;
-  justify-items: center;
-  justify-content: center; /* Centraliza o conteúdo do rodapé */
-  align-items: center; /* Alinha verticalmente o conteúdo do rodapé */
-}
+        .slider img {
+      position: absolute;
+      /* Centraliza a imagem no meio do contêiner */
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /* Faz a imagem caber no slider sem distorcer */
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      object-position: 50% 50%;
+      display: flex;
+      justify-items: center;
+      justify-content: center; /* Centraliza o conteúdo do rodapé */
+      align-items: center; /* Alinha verticalmente o conteúdo do rodapé */
+    }
 
     .slider li input:checked ~ img {
       opacity: 1;
